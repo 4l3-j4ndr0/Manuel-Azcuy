@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style contact.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="assets/css/aos/aos.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/icofont.min.css">
+        <!-- use reCAPTCHA of google -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+
+<body data-categoria="escultura">
+
+    <!-- Navigation Menu (copied from index.html for consistency) -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark contact-navbar">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Artwork
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="artworkDropdown">
+                            <a class="dropdown-item" href="serie_peces_de_ciudad.html">City fish</a>
+                            <a class="dropdown-item" href="serie_caminantes.html">Walkers</a>
+                            <a class="dropdown-item" href="serie_perros_de_calle.html">Street dogs</a>
+                            <a class="dropdown-item" href="serie_princesas.html">Princesses</a>
+                            <a class="dropdown-item" href="serie_sobreviviente.html">Survivor</a>
+                            <!-- Agrega más elementos si es necesario -->
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gallery
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="artworkDropdown">
+                            <a class="dropdown-item" href="gallery_drawing.html">Drawing</a>
+                            <a class="dropdown-item" href="gallery_sculture.html">sculpture</a>
+                            <a class="dropdown-item" href="gallery_pintura_figurativa.html">Painting Figurative</a>
+                            <a class="dropdown-item" href="gallery_pintura_abstracta.html">Painting Abstracte</a>
+                            <!-- Agrega más elementos si es necesario -->
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section for Contact Page -->
+    <section class="hero-section"
+        style="background-image: url('assets/images/mazzcuy-banner.jpg'); background-size: cover; background-position: center;">
+        <div class="overlay">
+            <div class="container text-center text-white ">
+                <h1 data-aos="fade-up">Gallery - Drawing</h1>
+                <ul class="banner_current_page">
+                    <li>You Here!<i class="icofont-thin-right"></i></li>
+                    <li><a href="index.html">Home<i class="icofont-thin-right"></i></a></li>
+                    <li> Gallery - Drawing </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section igames drawing -->
+
+    <section class="portfolio_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="portfolio_title text-center">
+                        <!-- <h2>Series Gallery </h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row grid" id="galleryContainer">
+                        <!-- codigo autogenerado -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container portfolio_lo_nav_area">
+            <div class="row">
+                <!-- inner portfolio lower nav -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="inner_portfolio_lower_nav text-center">
+                        <ul id="paginationContainer">
+                            <li>
+                                <a class="current" href="#">1</a>
+                                <a href="">2</a>
+                                <a href="#"><i class="icofont-thin-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="modalCaption">
+            </div>
+        </div>
+        <!-- End Modal -->
+
+         
+    </section>
+
+    <!-- section end images drawing -->
+
+    <!-- Footer Start -->
+    <footer>
+        <!-- Widgets Start -->
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xl-4">
+                        <div class="single-widget contact-widget" data-aos="fade-up" data-aos-delay="100">
+                            <div class="single-widget tags-widget" >
+                                <h6 class="widget-tiltle">Quick Links</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="index.html">Home</a><br>
+                                            <a href="#">About Artist</a><br>
+                                            <a href="#">Artwork - Series</a><br>
+                                            <a href="gallery_drawing.html">Gallery - Drawing</a><br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="">Gallery - Figurative</a><br>
+                                            <a href="#">Gallery - Abstract</a><br>
+                                            <a href="#">Gallery - Sculpture</a><br>
+                                            <a href="contact.html">Contant</a><br>
+                                        </div>
+                                    </div>
+                            </div>
+                            <br>
+                            <h6 class="widget-tiltle">CCONTACT INFORMATION</h6>
+                            <!-- <p>By subscribing to our mailing list you will always be update with the latest news from
+                                us.
+                            </p> -->
+                            
+                            <div class="media">
+                                <i class="fa fa-envelope-o"></i>
+                                <div class="media-body ml-3">
+                                    <h6>Have any questions?</h6>
+                                    <a href="mailto:support@steelthemes.com">Support@Steelthemes.com</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <i class="fa fa-phone"></i>
+                                <div class="media-body ml-3">
+                                    <h6>Call us & Hire us</h6>
+                                    <a href="tel:+610791803458"> +61 (0) 7 9180 3458</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-xl-4">
+                        <div class="single-widget recent-post-widget" data-aos="fade-up" data-aos-delay="100">
+                            <h6 class="widget-tiltle">Latest Updates</h6>
+                            <div class="row">
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post1.jpg" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post2.png" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post3.png" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post4.png" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post4.png" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                                <div class="col-6 mb-4 rcnt-img">
+                                    <a href="#"><img src="assets/images/rcnt-post4.png" alt="Recent Post"
+                                            class="img-fluid"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-xl-4">
+                        <div class="single-widget subscribe-widget" data-aos="fade-up" data-aos-delay="100">
+                            <h6 class="widget-tiltle">Subscribe us</h6>
+                            <p>Sign up for our mailing list to get latest updates and offers</p>
+                            <form class="" method="get" id="mc4wp-form">
+                                <div class="input-group">
+                                    <input class="field form-control" name="email" type="email"
+                                        placeholder="Email Address">
+                                    <span class="input-group-btn">
+                                        <button id="subscribe-btn" type="button" name="submit-mail"><i class="fa fa-check"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                            <p>We respect your privacy</p>
+                            <ul class="nav social-nav">
+                                <li><a href="https://www.facebook.com/profile.php?id=100083274635769" target="_blank"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.pinterest.com/manuelazcuy/" target="_blank"><i
+                                            class="fa fa-pinterest"></i></a></li>
+                                <li><a href="https://www.instagram.com/art_mazzcuy/" target="_blank"><i
+                                            class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Popup Modal subscription-->
+         <div id="subscribe-popup" class="popup-overlay">
+            <div class="popup-content">
+                <span id="close-popup" class="close-btn"><i class="icofont-close-squared-alt"></i></span>
+                <br>
+                <div class="form-group">
+                    <div class="alert alert-success" id="alert_newletter" role="alert" style="display: none;">
+                        Success</div>
+                </div>
+                <h4>Subscribe to Our Newsletter</h4>
+                <form id="popup-form">
+                    <input type="email" id="popup-email" name="email" placeholder="EMAIL" required>
+                    <div>
+                        <input type="checkbox" id="accept-terms" required>
+                        <label for="accept-terms">
+                            I agree to receive emails with news, updates, and promotions from Manuel Azcuy. I have
+                            read and accept the <a href="privacy_policy.html" target="_blank">Privacy Policy</a>
+                            .
+                        </label>
+                    </div>
+                    <!-- Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="6LfMqIAqAAAAAIlFrGTLQh0R4AS4xvjQF3R241Db"
+                        data-callback="recaptchaCallback"></div>
+                    <button type="submit" id="subscribe-button" disabled>Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <!-- Popup Modal subscription-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Widgets End -->
+        <!-- Foot Note Start -->
+        <div class="foot-note">
+            <div class="container">
+                <div
+                    class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
+                    <p class="mb-0" data-aos="fade-right" data-aos-offset="0">&copy; Manuel Azcuy All Rights Reserved.
+                    </p>
+                    <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="#">Terms Of Use</a><a
+                            href="#">Privacy & Security
+                            Statement</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Foot Note End -->
+    </footer>
+    <!-- Footer Endt -->
+    <script>
+        document.getElementById('subscribe-btn').addEventListener('click', function () {
+            console.log('Botón clickeado test en html');
+        });
+    </script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ajax-gallery.js"></script>
+    <!-- isotope js -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

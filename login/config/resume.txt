@@ -1,0 +1,15 @@
+Resumen de Estructura y Funcionalidad de los Archivos
+login.php: Página de inicio de sesión donde el usuario propietario puede autenticarse. Este archivo:
+Muestra el formulario de login.
+Valida las credenciales ingresadas y, si son correctas, redirige al usuario a admin.php.
+
+admin.php: Panel de administración donde se encuentra el formulario de subida de imágenes, accesible solo para el usuario autenticado. 
+Este archivo:
+Verifica si el usuario ha iniciado sesión.
+Muestra el formulario para subir imágenes (con condiciones para la selección de categoría y subcategoría).
+Envía los datos del formulario a upload.php para procesar la subida.
+upload.php: Script que procesa la subida de imágenes. Este archivo:
+
+Verifica la sesión activa.
+Procesa la imagen subida, guarda los detalles en la base de datos y almacena la ruta de la imagen en el servidor.
+logout.php: Permite cerrar la sesión y redirige de vuelta al login.

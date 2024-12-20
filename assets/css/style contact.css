@@ -1,0 +1,97 @@
+
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    min-height: 300px; /* Altura mínima para pantallas pequeñas */
+    text-align: center;
+    background-image: url('assets/images/mazzcuy-banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Overlay to darken the background image slightly */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.hero-section .overlay .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Estilos específicos para los campos de entrada en la página de contacto */
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc; /* Borde inicial */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Cambios al hacer foco en el campo */
+.contact-page input[type="text"]:focus,
+.contact-page input[type="email"]:focus,
+.contact-page textarea:focus {
+    border-color: #de1f1f; /* Color de borde en foco */
+    box-shadow: 0px 4px 12px rgba(222, 31, 31, 0.3); /* Sombra más intensa en foco */
+    outline: none;
+}
+
+/* Estilo específico para el área de texto (textarea) */
+.contact-page textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 150px;
+    color: #333 !important; /* Color de texto oscuro */
+    background-color: #f9f9f9 !important; /* Fondo claro */
+    opacity: 1 !important; /* Asegura que el fondo sea opaco */
+    z-index: 1; /* Asegura que el campo esté por encima de cualquier capa */
+    transition: all 0.3s ease;
+}
+
+
+/* Ajuste fino del margen del menú en la página de contacto */
+@media (min-width: 992px) {
+    .contact-navbar .navbar-nav {
+        margin-right: 4.5rem; /* Ajuste ligero para pantallas grandes */
+        margin-left: auto;
+    }
+
+    .hero-section {
+        min-height: 500px; /* Altura para escritorios */
+        background-size: contain; /* Cambia a 'contain' en pantallas grandes */
+        background-position: top center; /* Alinea la imagen en la parte superior */
+    }
+}
+
+@media (min-width: 576px) {
+    .hero-section {
+        min-height: 400px; /* Altura para tabletas */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-navbar .navbar-nav {
+        margin-left: 1rem  !important; /* Ajusta este valor según el espaciado que desees en móvil */
+    }
+}
